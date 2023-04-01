@@ -18,11 +18,13 @@ body {
   border-radius: 10px;
   padding: 0 65px 0 45px;
 }
-.range .sliderValue {
+.sliderValue {
   position: relative;
-  width: 100%;
+  margin: auto;
+  /* ширина должна быть меньше ширини инпута на ширину шарика катаки */
+  width: 93%;
 }
-.range .sliderValue span {
+span {
   position: absolute;
   width: 45px;
   height: 45px;
@@ -35,10 +37,10 @@ body {
   line-height: 55px;
   z-index: 2;
 }
-.range .sliderValue span.show {
+span.show {
   transform: translateX(-50%) scale(1);
 }
-.range .sliderValue span::after {
+span::after {
   position: absolute;
   content: "";
   width: 45px;
@@ -53,27 +55,27 @@ body {
 
   z-index: -1;
 }
-.range .field {
+.field {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-.range .field .value {
+.value {
   position: absolute;
   font-size: 18px;
   font-weight: 600;
   color: #664aff;
 }
-.range .field .value.left {
+.left {
   left: -22px;
 }
-.range .field .value.right {
+.right {
   right: -43px;
 }
 
-.range .field input {
+input {
   -webkit-appearance: none;
   height: 3px;
   width: 100%;
@@ -82,7 +84,7 @@ body {
   outline: none;
   border: none;
 }
-.range .field input::-webkit-slider-thumb {
+input::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
